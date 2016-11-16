@@ -1,12 +1,140 @@
 ﻿<!DOCTYPE html>
-<html>
+<html class="back">
 <head>
-    <title></title>
+    <title>Tic Tac Toe</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/custom.css" rel="stylesheet" />
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 </head>
-<body>
+<body class="back" ng-app="ticModule">
+
+
+    <div ng-controller="ticController as tic" class="container-fluid">
+
+        <div class="row full-height">
+
+            <div class="col-sm-12">
+
+                <div>
+
+                    <div class="row tac-row">
+
+                        <div class="col-xs-4 text-center">
+
+                            <button class="btn  center-block btn-block btn-tac tac-square"
+                                    ng-class="{'orange' : row1 || column1 || diagonal1 }"
+                                    ng-disabled="row2 || row3 || column2 || column3 || diagonal2  "
+                                    ng-model="ticArray[0]" uib-btn-radio="'{{letter}}'">
+                                {{ticArray[0]}}
+                            </button>
+
+
+                        </div>
+
+                        <div class="col-xs-4">
+                            <button class="btn  center-block  btn-block btn-tac tac-square"
+                                    ng-class="{'orange' : row1 || column2  }"
+                                    ng-disabled="row2 || row3 || column1 || column3 || diagonal2 || diagonal1 "
+                                    ng-model="ticArray[1]" uib-btn-radio="'{{letter}}'">
+                                {{ticArray[1]}}
+                            </button>
+
+                        </div>
+
+                        <div class="col-xs-4">
+
+                            <button class="btn  center-block  btn-block btn-tac tac-square"
+                                    ng-class="{'orange' : row1 || column3 || diagonal2 }"
+                                    ng-disabled="row2 || row3 || column1 || column2 || diagonal1 "
+                                    ng-model="ticArray[2]" uib-btn-radio="'{{letter}}'">
+                                {{ticArray[2]}}
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="row  tac-row">
+
+                        <div class="col-xs-4">
+
+                            <button class="btn  center-block  btn-block btn-tac tac-square"
+                                    ng-class="{'orange' : row2 || column1  }"
+                                    ng-disabled="row1 || row3 || column2 || column3 || diagonal2 || diagonal1 "
+                                    ng-model="ticArray[3]" uib-btn-radio="'{{letter}}'">
+                                {{ticArray[3]}}
+                            </button>
+                        </div>
+
+                        <div class="col-xs-4">
+                            <button class="btn  center-block  btn-block btn-tac tac-square"
+                                    ng-class="{'orange' : row2 || column2 || diagonal2 || diagonal1 }"
+                                    ng-disabled="row1 || row3 || column1 || column3 "
+                                    ng-model="ticArray[4]" uib-btn-radio="'{{letter}}'">
+                                {{ticArray[4]}}
+                            </button>
+
+                        </div>
+
+                        <div class="col-xs-4">
+                            <button class="btn  center-block  btn-block btn-tac tac-square"
+                                    ng-class="{'orange' : row2 || column3 }"
+                                    ng-disabled="row1 || row3 || column1 || column2 || diagonal2 || diagonal1"
+                                    ng-model="ticArray[5]" uib-btn-radio="'{{letter}}'">
+                                {{ticArray[5]}}
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row  tac-row">
+
+                        <div class="col-xs-4">
+
+                            <button class="btn  center-block  btn-block btn-tac tac-square"
+                                    ng-class="{'orange' : row3 || column1 || diagonal2 }"
+                                    ng-disabled="row1 || row2 || column2 || column3 || diagonal1"
+                                    ng-model="ticArray[6]" uib-btn-radio="'{{letter}}'">
+                                {{ticArray[6]}}
+                            </button>
+                        </div>
+
+                        <div class="col-xs-4">
+                            <button class="btn  center-block  btn-block btn-tac tac-square"
+                                    ng-class="{'orange' : row3 || column2  }"
+                                    ng-disabled="row1 || row2 || column1 || column3 || diagonal1 || diagonal2"
+                                    ng-model="ticArray[7]" uib-btn-radio="'{{letter}}'">
+                                {{ticArray[7]}}
+                            </button>
+
+                        </div>
+
+                        <div class="col-xs-4">
+                            <button class="btn  center-block  btn-block btn-tac tac-square"
+                                    ng-class="{'orange' : row3 || column3 || diagonal1 }"
+                                    ng-disabled="row1 || row2 || column1 || column2 || diagonal2"
+                                    ng-model="ticArray[8]" uib-btn-radio="'{{letter}}'">
+                                {{ticArray[8]}}
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
     <script src="scripts/angular.min.js"></script>
+    <script src="scripts/ui-bootstrap.min.js"></script>
+    <script src="scripts/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+
 </body>
 </html>

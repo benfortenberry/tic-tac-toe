@@ -1,0 +1,31 @@
+﻿<div class="modal-header text-center">
+
+    Game Over
+
+</div>
+<div class="modal-body text-center ">
+    
+    <span>
+        <span ng-if="letter"> {{letter}} Wins!</span>
+        <span ng-if="!letter"> Tie</span>
+    </span>
+
+</div>
+<div class="modal-footer">
+
+    <div class="row">
+        <div class="col-xs-12">
+
+            <button type="button" data-fittext class="btn btn-tac orange btn-lg btn-block"
+                    ng-click="restart()">
+                <div class="huge-font">
+                    Restart
+                </div>
+
+            </button>
+        </div>
+
+    </div>
+
+
+</div>
