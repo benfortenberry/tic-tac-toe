@@ -1,2 +1,2 @@
 # tic-tac-toe
-http://thumbsupsolutions.com/tictactoe/
+http://thumbsup.solutions/tictactoe/
